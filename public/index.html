@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
         <script src="/socket.io/socket.io.js"></script>
         <script>
+            $(document).ready(function() {
               var socket = io.connect(location.hostname, {port: location.port});
               socket.on('client', function (data) {
-                console.log(data.message);
-                socket.emit('server', { message: 'from client' });
+                $("#fromserver").text(data.message);
+                socket.emit('server', { message: 'hello from client' });
               });
+            });
         </script>
     </head>
     <body>
         hey man, welcome to racing daemon
+        <div id="fromserver"></div>
     </body>
 </html>

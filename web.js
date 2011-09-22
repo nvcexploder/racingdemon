@@ -6,11 +6,11 @@ app.configure(function() {
     app.use(express.methodOverride());
     app.use(express.bodyParser());
     app.use(app.router);    
-    app.use(express['static'](__dirname + "/public"));
+    app.use(express.['static'](__dirname + "/public"));
 });
 
 io.sockets.on('connection', function (socket) {
-  socket.emit('client', { message: "from server" });
+  socket.emit('client', { message: "hello from server" });
   socket.on('server', function (data) {
     console.log(data.message);
   });
