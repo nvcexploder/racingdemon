@@ -1,0 +1,10 @@
+{
+  "name": "RacingDaemon",
+  "version" : "0.0.1",
+  "description": "card game for peoples",
+  "author": "ben, chris, and merlyn",
+  "dependencies": {
+    "express": "latest",
+    "socket.io" : "latest"
+  }
+}
