@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+              var socket = io.connect(location.hostname, {port: location.port});
+              socket.on('client', function (data) {
+                console.log(data.message);
+                socket.emit('server', { message: 'from client' });
+              });
+        </script>
     </head>
     <body>
         hey man, welcome to racing daemon
