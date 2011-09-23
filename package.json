@@ -4,7 +4,8 @@
   "description": "card game for peoples",
   "author": "ben, chris, and merlyn",
   "dependencies": {
-    "express": "latest",
-    "socket.io" : "latest"
+    "express": "latest"
+  , "socket.io" : "latest"
+  , "resig-class" : "latest"
   }
 }
